@@ -48,7 +48,7 @@ pipeline {
                 sh '''
                     docker run -d --name ${API_CONT} --network ${NETWORK} \
                       -e ConnectionStrings__DefaultConnection="Server=${MYSQL_CONT};Port=3306;Database=${MYSQL_DB};User=root;Password=${MYSQL_PWD};" \
-                      -p 5000:8080 \
+                      -p 5001:8080 \
                       ${IMAGE}
                 '''
             }
